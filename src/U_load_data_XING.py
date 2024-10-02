@@ -45,8 +45,8 @@ def load_data(data_name, use_raw_cf=False):
 
     # load content data
     timer.tic()
-    user_content_vec = sp.load_npz(user_content_file)
-    dat['user_content_vec'] = user_content_vec.tolil(copy=False)
+    # user_content_vec = sp.load_npz(user_content_file)
+    # dat['user_content_vec'] = user_content_vec.tolil(copy=False)
     item_content_vec = sp.load_npz(item_content_file)
     dat['item_content_vec'] = item_content_vec.tolil(copy=False)
     timer.toc('loaded item feature sparse matrix: %s' % (str(item_content_vec.shape))).tic()
