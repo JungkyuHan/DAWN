@@ -1,6 +1,6 @@
 import numpy as np
 import tensorflow as tf
-from CSR_Dawn import CSR_Dawn
+from NCIR import NCIR
 import U_load_data_CiteULike as load_data_CiteULike
 import U_utils as utils
 
@@ -92,7 +92,7 @@ def main(trial=0):
 
     item_content_vec_rank = item_content_vec.shape[1]
 
-    csr_dawn = CSR_Dawn(cf_vec_rank=cf_vec_rank,
+    csr_dawn = NCIR(cf_vec_rank=cf_vec_rank,
                         item_content_vec_rank=item_content_vec_rank,
                         attention_vec_dim=attention_vec_dim,
                         model_select=model_select, num_neighbors=num_neighbors, num_experts=num_experts,
